@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     }else if(ret == LUA_ERRSYNTAX){
         printf("Run lua script failed with syntax error.\r\n");
     }else{
-        printf("Read lua script failed with system error.\r\n");
+        printf("Run lua script failed with system error.\r\n");
     }
 
     lua_getglobal(lua, "name");
