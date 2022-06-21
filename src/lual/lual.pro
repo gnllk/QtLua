@@ -5,6 +5,12 @@ DEFINES += LUAL_LIBRARY
 
 CONFIG += c++11
 
+# Default rules for deployment.
+qnx: target.path = /tmp/lua/
+else: unix:!android: target.path = /opt/lua/
+!isEmpty(target.path): INSTALLS += target
+
+# target
 INCLUDEPATH += $$PWD
 CONFIG(release, debug|release){
     DESTDIR = $$PWD/../release/

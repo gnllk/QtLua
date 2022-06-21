@@ -10,8 +10,8 @@ SOURCES += \
         $$PWD/../lual/lua.c
 
 # Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+qnx: target.path = /tmp/lua/
+else: unix:!android: target.path = /opt/lua/
 !isEmpty(target.path): INSTALLS += target
 
 # lua library
